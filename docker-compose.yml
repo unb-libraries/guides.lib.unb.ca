@@ -1,0 +1,18 @@
+services:
+  guides-lib-unb-ca:
+    build:
+      context: .
+    restart: unless-stopped
+    container_name: guides-lib-unb-ca
+    expose:
+      - "80"
+    ports:
+      - "3087:80"
+    env_file:
+      - ./env/nginx.env
+    networks:
+      - guides.lib.unb.ca
+
+networks:
+  guides.lib.unb.ca:
+    name: guides.lib.unb.ca

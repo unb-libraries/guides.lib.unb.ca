@@ -1,0 +1,49 @@
+dockworker:
+  version: '6'
+  application:
+    name: Guides Redirect
+    uri: https://guides.lib.unb.ca
+    description: >
+      This redirects old guides URLs to the one guides URLs.
+    topics:
+      - guides
+    identifiers:
+      id: guides.lib.unb.ca
+      slug: guides-lib-unb-ca
+      short_slug: guides
+      uuid: 3087
+    framework:
+      name: Nginx
+      version: 1
+      startup_finished_marker: '99_startup_sequence_complete'
+      endpoint:
+        name: http
+        port: 80
+        readiness_timeout: 15
+    license:
+      license: MIT
+      holder: University of New Brunswick Libraries
+    shell:
+      path: /bin/sh
+  endpoints:
+    env:
+      - prod
+    deployments:
+      guides-lib-unb-ca:
+        default: true
+        managed: true
+        name: guides-lib-unb-ca
+  workflows:
+    vcs:
+      type: github
+      owner: unb-libraries
+      name: guides.lib.unb.ca
+    jira:
+      project_keys:
+        - GUIDES
+    image:
+      name: ghcr.io/unb-libraries/guides.lib.unb.ca
+      parent: ghcr.io/unb-libraries/nginx:3.x
+      repository: GitHub
+      push-branches:
+        - prod
