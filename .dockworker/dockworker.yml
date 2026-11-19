@@ -43,7 +43,7 @@ dockworker:
         - GUIDES
     image:
       name: ghcr.io/unb-libraries/guides.lib.unb.ca
-      parent: ghcr.io/unb-libraries/nginx:3.x
+      parent: ghcr.io/unb-libraries/nginx:3.23.x
       repository: GitHub
       push-branches:
         - prod
