@@ -11,7 +11,7 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 LABEL ca.unb.lib.generator="nginx" \
-  org.opencontainers.image.title="nginx" \
+  org.opencontainers.image.title="guides.lib.unb.ca" \
   org.opencontainers.image.description="guides.lib.unb.ca redirects old URLs at UNB Libraries." \
   org.opencontainers.image.vendor="University of New Brunswick Libraries" \
   org.opencontainers.image.url="https://github.com/unb-libraries/guides.lib.unb.ca" \
