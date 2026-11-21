@@ -1,4 +1,4 @@
-FROM ghcr.io/unb-libraries/nginx:3.23.x
+FROM ghcr.io/unb-libraries/nginx:3.24.x
 
 COPY ./build /build
 
