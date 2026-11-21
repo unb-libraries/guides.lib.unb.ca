@@ -14,6 +14,7 @@ LABEL ca.unb.lib.generator="nginx" \
   org.opencontainers.image.title="guides.lib.unb.ca" \
   org.opencontainers.image.description="guides.lib.unb.ca redirects old URLs at UNB Libraries." \
   org.opencontainers.image.vendor="University of New Brunswick Libraries" \
+  org.opencontainers.image.authors="UNB Libraries <libsupport@unb.ca>" \
   org.opencontainers.image.url="https://github.com/unb-libraries/guides.lib.unb.ca" \
   org.opencontainers.image.source="https://github.com/unb-libraries/guides.lib.unb.ca" \
   org.opencontainers.image.version="$VERSION" \
